@@ -53,7 +53,7 @@ jobs:
           haxelib git faxe https://github.com/uhrobots/faxe
           haxelib git polymod https://github.com/larsiusprime/polymod.git f3c0320aa51c848318934c2893ed78f42b7de74c
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
-          haxelib git extension-webm https://github.com/KadeDev/extension-webm
+          haxelib git extension-webm https://github.com/brusakas/extension-webm
           haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit.git
           haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
           haxelib install actuate 
@@ -70,7 +70,6 @@ jobs:
           haxelib run lime config JAVA_HOME $JAVA_HOME
           haxelib run lime config ANDROID_SETUP true
           haxelib set lime 7.9.0
-          haxelib run lime rebuild extension-webm android
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
           
