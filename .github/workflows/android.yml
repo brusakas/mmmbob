@@ -71,10 +71,9 @@ jobs:
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
 
-      - name : set hxcpp to 4.2.1
+      - name : Set hxcpp to git
         run: |
-          haxelib install hxcpp 4.2.1 > /dev/null
-          haxelib set hxcpp 4.2.1
+          haxelib git hxcpp https://github.com/HaxeFoundation/hxcpp.git
           
       - name: Compile
         run: |
