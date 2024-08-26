@@ -74,6 +74,7 @@ jobs:
       - name : Set hxcpp to git
         run: |
           haxelib git hxcpp https://github.com/HaxeFoundation/hxcpp.git
+          haxelib run lime rebuild hxcpp
           
       - name: Compile
         run: |
