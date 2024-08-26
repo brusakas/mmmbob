@@ -21,13 +21,13 @@ jobs:
         uses: nttld/setup-ndk@v1
         id: setup-ndk
         with:
-          ndk-version: r21e
+          ndk-version: r15c
 
       - name: Setup Java JDK
         uses: actions/setup-java@main
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: 'oracle'
+          java-version: '11'
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v2
