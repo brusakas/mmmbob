@@ -38,7 +38,7 @@ jobs:
       - name: script run line haha
         run: |
           haxelib setup ~/haxelib
-          haxelib install hxcpp > /dev/null
+          haxelib install hxcpp 4.2.1 > /dev/null
           haxelib install lime
           haxelib install openfl
           haxelib install flixel
