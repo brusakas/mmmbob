@@ -38,7 +38,6 @@ jobs:
       - name: script run line haha
         run: |
           haxelib setup ~/haxelib
-          haxelib install hxcpp 4.2.1 > /dev/null
           haxelib install lime
           haxelib install openfl
           haxelib install flixel
@@ -71,6 +70,11 @@ jobs:
           haxelib run lime config ANDROID_SETUP true
         env:
           ANDROID_NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
+
+      - name : set hxcpp to 4.2.1
+        run: |
+          haxelib install hxcpp 4.2.1 > /dev/null
+          haxelib set hxcpp 4.2.1
           
       - name: Compile
         run: |
